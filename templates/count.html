@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <!-- <center> -->
+        <h1>There is {{ count }} in this text</h1>
+        <div><a href="{% url 'home' %}">Home</a></div>
+        <div>Full Text : {{ fulltext }}</div>
+        <div>
+            Word Count : <br/>
+            <ol>
+            {% for word, count in word_dictionary %}
+                <li> {{word}} : {{count}}</li>
+            {% endfor %}
+            </ol>
+        </div>
+    <!-- </center> -->
+</body>
+</html>
